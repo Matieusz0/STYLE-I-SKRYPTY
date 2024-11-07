@@ -1,0 +1,15 @@
+.my-btn {
+    border: none;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    background-color: limegreen;
+    color: white;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px silver;
+
+    &:active {
+        box-shadow: none;
+    }
+}
