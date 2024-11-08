@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./skrypt.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button id="bt1" oneclick="Pierwszy()">Pierwszy</button>
+    <button id="bt2">Drugi</button>
+
+    </div>
+        <div>
+        <div>
+            <label for="txtImie">Imie</label>
+        </div>
+        <div>
+            <input type="text" id="txtImie" name="txtImie" />
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <label for="cbMiasta">Miasta</label>
+        </div>
+        <div>
+            <select id="cbMiasta" name="cbMiasta" contenteditable="true">
+                <option value="1">Białogard</option>
+                <option value="2">Koszalin</option>
+                <option value="0" selected>WYBIERZ MIASTO</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <label for="rngRed">Red</label>
+            <input type="range" id="rngRed" name="rngRed" min="0" max="255" step="1" value="10" />
+            <input type="text" id="txtRed" name="txtRed" readonly />
+        </div>
+    </div>
+    <div>
+        <div>
+            <label for="rngGreen">Green</label>
+            <input type="range" id="rngGreen" name="rngGreen" min="0" max="255" step="1" value="10" />
+            <input type="text" id="txtGreen" name="txtGreen" readonly />
+        </div>
+    </div>
+    <div>
+        <div>
+            <label for="rngBlue">Blue</label>
+            <input type="range" id="rngBlue" name="rngBlue" min="0" max="255" step="1" value="10" />
+            <input type="text" id="txtBlue" name="txtBlue" readonly />
+        </div>
+    </div>
+</body>
+</html>
