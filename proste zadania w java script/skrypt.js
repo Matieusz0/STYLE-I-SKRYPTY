@@ -35,23 +35,48 @@ const txtBlue = document.getElementById("txtBlue");
 if(rngRed && txtRed){
     rngRed.addEventListener("input", () => {
         txtRed.value = rngRed.value;
+//document.body.style.backgroundcolor - zmiana tla
+//rgb 0, 0, 0 jako kolory sa pobierane z suwaka rngRed rngGreen rngBlue
         document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
     });
+    txtRed.addEventListener("input", () => {
+        const valueRed = parseInt(txtRed.value);
+        if (!isNaN(valueRed) && valueRed >= -1 && valueRed <= 255) {
+            rngRed.value = valueRed;
+            document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
+        } 
+    })
 }
 
 if(rngGreen && txtGreen){
     rngGreen.addEventListener("input", () => {
-        txtGreen.value = rngGreen.value
+        txtGreen.value = rngGreen.value;
         document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
     });
+    txtGreen.addEventListener("input", () => {
+        const valueGreen = parseInt(txtGreen.value);
+        if (!isNaN(valueGreen) && valueGreen >= -1 && valueGreen <= 255) {
+            rngGreen.value = valueGreen;
+            document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
+        } 
+    })
 }
 
 if(rngBlue && txtBlue){
     rngBlue.addEventListener("input", () => {
-        txtBlue.value = rngBlue.value
+        txtBlue.value = rngBlue.value;
         document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
     });
+    txtBlue.addEventListener("input", () => {
+        const valueBlue = parseInt(txtBlue.value);
+        if (!isNaN(valueBlue) && valueBlue >= -1 && valueBlue <= 255) {
+            rngBlue.value = valueBlue;
+            document.body.style.backgroundColor = `rgb(${rngRed.value}, ${rngGreen.value}, ${rngBlue.value})`;
+        } 
+    })
 }
+
+
 
 //skrypt ktory pozwala zaladowac rzeczy podczas odpalenia strony
 window.addEventListener("DOMContentLoaded", () => {
