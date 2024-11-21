@@ -1,0 +1,20 @@
+ <div>
+        <input type="button" id="bt" name="bt" value="click">
+        <input type="number" id="klik" name="klik">
+    </div>
+
+    <script>
+        const bt = document.getElementById("bt");
+        const klik = document.getElementById("klik");
+        
+        let clicks = 0;
+        
+        if (bt && klik){
+            bt.addEventListener("click", () => {
+                console.log(`ilość clicków: ${clicks}`)
+                clicks++;
+                klik.value = clicks;
+
+            });
+        };
+    </script>
