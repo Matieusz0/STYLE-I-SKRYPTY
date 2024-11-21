@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode strony</title>
+    <style>
+        .light-mode{
+            background-color: white;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body id="body">
+    <button id="mode-toggle" class="light-mode">Mode</button>
+    <script>
+        const btToggleMode = document.getElementById("mode-toggle");
+        const bodyToggleMode = document.getElementById("body");
+        
+        if(btToggleMode){
+            btToggleMode.addEventListener('click', () => {
+                btToggleMode.classList.toggle('dark-mode');
+                bodyToggleMode.classList.toggle('dark-mode');
+            });
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            alert("witaj");
+        });
+    </script>
+</body>
+</html>
